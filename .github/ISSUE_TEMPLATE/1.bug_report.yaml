@@ -73,8 +73,8 @@ body:
         - eu-north-1
         - sa-east-1
         - me-south-1
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     attributes:
@@ -107,8 +107,8 @@ body:
         - Web previews
         - Webhooks
         - Not Applicable
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: markdown
     attributes:
