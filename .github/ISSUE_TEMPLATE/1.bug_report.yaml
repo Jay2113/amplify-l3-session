@@ -26,7 +26,7 @@ body:
         - label: I have removed any sensitive information from my code snippets and submission.
           required: true
 
- - type: markdown
+  - type: markdown
     attributes:
       value: |
         ## Amplify Environment
@@ -110,7 +110,7 @@ body:
       validations:
         required: true
 
-- type: markdown
+  - type: markdown
     attributes:
       value: |
         ## Details
