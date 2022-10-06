@@ -39,6 +39,8 @@ body:
 
         https://console.aws.amazon.com/amplify/home?region=<AWS-REGION>#/<APP-ID>
 
+        OR
+
         Within the Amplify Console, navigate to App Settings -> General -> App Arn, and inspect the last portion of the identifier:
 
         arn:aws:amplify:AWS-REGION:accountId:apps/<APP-ID>
