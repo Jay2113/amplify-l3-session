@@ -35,11 +35,11 @@ body:
       label: App Id
       description: |
         ```
-        Find the `App Id` in the last portion of your URL. For example:
+        Find the App Id in the last portion of your URL. For example:
 
         https://console.aws.amazon.com/amplify/home?region=<AWS-REGION>#/<APP-ID>
 
-        Or, go to **App Settings** -> **General** -> **AppArn**, and inspect the last portion of the identifier:
+        Within the Amplify Console, navigate to App Settings -> General -> App Arn, and inspect the last portion of the identifier:
 
         arn:aws:amplify:AWS-REGION:accountId:apps/<APP-ID>
         ```
@@ -145,7 +145,7 @@ body:
       description: |
         If applicable, please include relevant portions of your `amplify.yml`. 
 
-        **Do not include information that is sensitive in nature such as your domain name, company, etc.!**
+        **Be sure to remove any sensitive data.**
       render: yaml
 
   - type: textarea
@@ -172,4 +172,5 @@ body:
       label: Additional information
       description: |
         If you have any additional information, workarounds, etc. for us, use the field below.
+
         Please note, you can attach screenshots or screen recordings here, by dragging and dropping files in the field below.
