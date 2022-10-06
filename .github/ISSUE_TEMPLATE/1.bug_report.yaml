@@ -76,7 +76,7 @@ body:
   - type: dropdown
     attributes:
       label: Amplify Hosting feature
-      description: What feature(s) is this about?
+      description: What [feature(s)](https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html#amplify-console-features) is this about?
       multiple: true
       options:
         - Access control
