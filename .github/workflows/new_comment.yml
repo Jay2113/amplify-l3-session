@@ -19,8 +19,7 @@ jobs:
       - name: Run webhook curl command
         env:
           WEBHOOK_URL: ${{ secrets.SLACK_COMMENT_WEBHOOK_URL }}
-          GITHUB_CONTEXT: ${{toJson(github)}}
+          # GITHUB_CONTEXT: ${{toJson(github)}}
           COMMENT: ${{toJson(github.event.comment.body)}}
         shell: bash
-        run: echo $GITHUB_CONTEXT
-# echo $COMMENT | sed 's/\\\n/. /g; s/\\\r//g; s/[^a-zA-Z0-9 &().,:]//g' | xargs -I {} curl -s POST "$WEBHOOK_URL" -H "Content-Type:application/json" --data '{"comment":"{}", "commentUrl":"${{github.event.comment.html_url}}", "issueAuthor":"${{github.event.comment.user.login}}", "issueNumber":"${{github.event.issue.number}}", "issueCreateTime":"${{github.event.issue.created_at}}"}'
+        run: echo $COMMENT | sed 's/\\\n/. /g; s/\\\r//g; s/[^a-zA-Z0-9 &().,:]//g' | xargs -I {} curl -s POST "$WEBHOOK_URL" -H "Content-Type:application/json" --data '{"comment":"{}", "commentUrl":"${{github.event.comment.html_url}}", "commentAuthor":"${{github.event.comment.user.login}}", "issueUrl":"${{github.event.comment.issue_url}}", "commentCreateTime":"${{github.event.comment.created_at}}", "commentCount":"${{github.event.issue.comments}}", "issueNumber":"${{github.event.issue.number}}", "reactionCount":"${{github.event.issue.reactions.total_count}}"}'
