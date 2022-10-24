@@ -2,7 +2,7 @@ name: Notify New Comment
 
 # Controls when the action will run
 on:
-  issues_comment:
+  issue_comment:
     types: [created]
 
 # Limit the GITHUB_TOKEN permissions
