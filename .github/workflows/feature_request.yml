@@ -20,4 +20,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          gh issue comment $ISSUE_NUMBER --repo amplify-l3-session -b "This has been identified as a feature request. If this feature is important to you, we strongly encourage you to give a 👍 reaction on the request. This helps us prioritize new features most important to you. Thank you!"
+          gh issue comment $ISSUE_NUMBER --repo Jay2113/amplify-l3-session -b "This has been identified as a feature request. If this feature is important to you, we strongly encourage you to give a 👍 reaction on the request. This helps us prioritize new features most important to you. Thank you!"
