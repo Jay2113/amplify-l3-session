@@ -19,7 +19,7 @@ jobs:
       - uses: dessant/lock-threads@v3
         with:
           github-token: ${{ github.token }}
-          issue-inactive-days: "1"
+          issue-inactive-days: "0"
           exclude-issue-created-before: ""
           exclude-issue-created-after: ""
           exclude-issue-created-between: ""
