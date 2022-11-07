@@ -1,0 +1,23 @@
+name: "Custom Domain Label Added"
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  project:
+    name: Custom domain troubleshooting message
+    runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'custom-domain' }}
+
+    steps:
+      - name: add custom domain troubleshooting comment
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment $ISSUE_NUMBER --repo Jay2113/amplify-l3-session -b "If this issue is related to custom domains, kindly review the following to see if it resolves your issue:\n Custom domains troubleshooting guide: https://docs.aws.amazon.com/amplify/latest/userguide/custom-domain-troubleshoot-guide.html \n Custom domains troubleshooting FAQs: https://github.com/aws-amplify/amplify-console/blob/master/FAQ.md"
