@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Testing GitHub Connectivity!
+          Testing GitHub Connectivity - AWS Amplify!
         </a>
       </header>
     </div>
